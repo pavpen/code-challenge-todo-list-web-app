@@ -1,0 +1,55 @@
+li.todo-new-item-li::marker {
+    content: '';
+}
+
+.todo-new-item-marker {
+    border: 2pt solid transparent;
+    border-radius: 0.4lh;
+    width: 0.8lh;
+    height: 0.8lh;
+    margin-right: 0.5em;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 0.1lh;
+}
+
+.todo-new-item-marker::before {
+    content: '+';
+}
+
+.todo-new-item-description {
+    vertical-align: text-bottom;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: lightgray;
+}
+
+.todo-status-bar {
+    font-size: medium;
+    text-align: left;
+}
+
+.todo-item-filter-group {
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+    border: 0;
+}
+
+.todo-item-filter-option {
+    background: none;
+    color: lightgray;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border: 1px solid transparent;
+}
+
+.todo-item-filter-option:hover {
+    border: 1px solid lightgray;
+}
+
+.todo-item-filter-option.todo-item-filter-checked {
+    background-color: darkslategray;
+}

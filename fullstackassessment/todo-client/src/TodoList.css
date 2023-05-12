@@ -1,0 +1,69 @@
+li.todo-list-item::marker {
+    content: '';
+}
+
+.todo-checkbox {
+    appearance: none;
+    border: 2pt solid;
+    border-radius: 0.6lh;
+    outline: 0;
+    background: none;
+    width: 1.2lh;
+    height: 1.2lh;
+    margin-right: 0.5em;
+    display: inline-block;
+    vertical-align: baseline;
+    position: relative;
+    top: 0.1lh;
+    color: lightslategray;
+}
+
+.todo-checkbox::before {
+    content: '🗸';
+    color: transparent;
+    position: relative;
+    left: 0.1lh;
+}
+
+.todo-checkbox.todo-item-completed {
+    color: darkslategray;
+}
+
+.todo-checkbox.todo-item-completed::before {
+    content: '🗸';
+    color: lightgreen;
+    position: relative;
+    left: 0.1lh;
+}
+
+.todo-item-description {
+    vertical-align: baseline;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+.todo-item-description.todo-item-completed {
+    text-decoration: line-through;
+    color: lightslategrey;
+}
+
+.todo-delete-button {
+    background-color: transparent;
+    border: 1px solid darkslategray;
+    outline: 0;
+    vertical-align: middle;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+span:hover>.todo-delete-button {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}
+
+.todo-delete-button:hover {
+    border: 1px solid lightslategray;
+}

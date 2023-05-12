@@ -1,0 +1,12 @@
+@@ -0,0 +1,10 @@
+.DS_Store
+__MACOSX
+
+.idea
+*.iml
+
+.gradle
+build
+
+todo-client/node_modules
+.eslintcache
