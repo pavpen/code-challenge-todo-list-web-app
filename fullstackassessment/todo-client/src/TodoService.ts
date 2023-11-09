@@ -12,6 +12,9 @@ export class TodoService {
                 body: JSON.stringify(newItem),
                 headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
             });
+        if (Math.trunc(r.status / 100) !== 2) {
+            throw new Error(r.statusText);
+        }
         return await r.json();
     }
 

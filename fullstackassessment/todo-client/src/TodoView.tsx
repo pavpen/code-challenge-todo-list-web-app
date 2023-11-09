@@ -67,7 +67,8 @@ export function TodoNewItemBox(
         if (target.value) {
             todoService.create({ description: target.value, completed: false })
                 .then(newItem =>
-                    listStateReducer(new CreateItemAction(newItem)));
+                    listStateReducer(new CreateItemAction(newItem)))
+                .catch(error => console.error(error));                    
             target.value = '';
         }
     };
